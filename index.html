@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Atlas de incidencia delictiva en México, 2015–2025</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f7;
+      color: #1f2d3a;
+    }
+
+    header {
+      background: linear-gradient(135deg, #17202A, #34495E);
+      color: white;
+      text-align: center;
+      padding: 55px 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 38px;
+    }
+
+    header p {
+      font-size: 18px;
+      margin-top: 12px;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: white;
+      border-bottom: 1px solid #ddd;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      padding: 14px 20px;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 12px;
+      text-decoration: none;
+      color: #1f2d3a;
+      font-weight: bold;
+      font-size: 15px;
+    }
+
+    nav a:hover {
+      color: #c0392b;
+    }
+
+    section {
+      max-width: 1250px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .intro {
+      background: white;
+      padding: 28px;
+      border-radius: 14px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      line-height: 1.7;
+    }
+
+    h2 {
+      border-left: 7px solid #c0392b;
+      padding-left: 12px;
+      color: #1f2d3a;
+      font-size: 28px;
+    }
+
+    .section-desc {
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
+
+    .grupo-bien {
+      background: white;
+      border-radius: 14px;
+      padding: 22px;
+      margin-bottom: 35px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+
+    .grupo-bien h3 {
+      color: #922B21;
+      font-size: 23px;
+      margin-top: 0;
+      border-bottom: 2px solid #f2d7d5;
+      padding-bottom: 8px;
+    }
+
+    .grupo-delito {
+      margin-top: 22px;
+    }
+
+    .grupo-delito h4 {
+      font-size: 19px;
+      color: #2c3e50;
+      margin-bottom: 15px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: #fbfcfc;
+      padding: 17px;
+      border-radius: 13px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.10);
+    }
+
+    .card h5 {
+      font-size: 16px;
+      color: #1f2d3a;
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    .tag {
+      display: inline-block;
+      background-color: #f9e79f;
+      color: #7d6608;
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      margin: 3px 3px 10px 0;
+    }
+
+    .delito-tag {
+      display: inline-block;
+      background-color: #d6eaf8;
+      color: #1b4f72;
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      margin: 3px 3px 10px 0;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      margin-top: 8px;
+    }
+
+    footer {
+      background-color: #1f2d3a;
+      color: white;
+      text-align: center;
+      padding: 22px;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Atlas de incidencia delictiva en México, 2015–2025</h1>
+  <p>Análisis espacial por bien jurídico afectado, tipo de delito y entidad federativa</p>
+</header>
+
+<nav>
+  <a href="#mapas-bien">Mapas de delito por bien jurídico</a>
+  <a href="#top-estados">Top 10 estados</a>
+  <a href="#acumulada">Incidencia delictiva acumulada</a>
+  <a href="#evolucion">Evolución anual</a>
+  <a href="#conclusiones">Conclusiones</a>
+</nav>
+
+<section id="presentacion">
+  <div class="intro">
+    <h2>Presentación</h2>
+    <p>
+      El presente atlas tiene como objetivo mostrar la distribución espacial de la incidencia delictiva
+      en México durante el periodo 2015–2025. La información se organiza por bien jurídico afectado,
+      tipo de delito y entidad federativa.
+    </p>
+    <p>
+      Este producto cartográfico permite observar patrones territoriales, concentración estatal y
+      comportamiento acumulado de los principales delitos registrados.
+    </p>
+  </div>
+</section>
+
+<section id="introduccion">
+  <div class="intro">
+    <h2>Introducción</h2>
+    <p>
+      La incidencia delictiva permite conocer el registro de presuntos delitos ocurridos en el territorio
+      nacional. Su análisis espacial permite identificar entidades federativas con mayor acumulación
+      de registros y diferencias entre tipos de delito.
+    </p>
+  </div>
+</section>
+
+<section id="mapas-bien">
+  <h2>Mapas de delito por bien jurídico</h2>
+  <p class="section-desc">
+    Esta sección presenta mapas coropléticos organizados por bien jurídico afectado.
+  </p>
+
+  <div class="grupo-bien">
+    <h3>El patrimonio</h3>
+
+    <div class="grupo-delito">
+      <h4>Mapa general del bien jurídico</h4>
+      <div class="grid">
+        <div class="card">
+          <h5>Incidencia delictiva por entidad federativa: El patrimonio</h5>
+          <p class="tag">El patrimonio</p>
+          <p class="delito-tag">Bien jurídico</p>
+          <img src="mapa_El_patrimonio.png" alt="Mapa El patrimonio">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grupo-bien">
+    <h3>La familia</h3>
+
+    <div class="grupo-delito">
+      <h4>Mapa general del bien jurídico</h4>
+      <div class="grid">
+        <div class="card">
+          <h5>Incidencia delictiva por entidad federativa: La familia</h5>
+          <p class="tag">La familia</p>
+          <p class="delito-tag">Bien jurídico</p>
+          <img src="mapa_La_familia.png" alt="Mapa La familia">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grupo-bien">
+    <h3>La vida y la integridad corporal</h3>
+
+    <div class="grupo-delito">
+      <h4>Mapa general del bien jurídico</h4>
+      <div class="grid">
+        <div class="card">
+          <h5>Incidencia delictiva por entidad federativa: La vida y la integridad corporal</h5>
+          <p class="tag">La vida y la integridad corporal</p>
+          <p class="delito-tag">Bien jurídico</p>
+          <img src="mapa_La_vida_y_la_Integridad_corporal.png" alt="Mapa vida e integridad corporal">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="top-estados">
+  <h2>Top 10 estados</h2>
+  <p class="section-desc">
+    Esta sección muestra mapas que resaltan las diez entidades federativas con mayor incidencia acumulada
+    para cada tipo de delito.
+  </p>
+
+  <div class="grupo-bien">
+    <h3>El patrimonio</h3>
+
+    <div class="grupo-delito">
+      <h4>Robo</h4>
+      <div class="grid">
+        <div class="card">
+          <h5>Top 10 estados con mayor incidencia de robo</h5>
+          <p class="tag">El patrimonio</p>
+          <p class="delito-tag">Robo</p>
+          <img src="mapa_top_El_patrimonio_Robo.png" alt="Top 10 Robo">
+        </div>
+      </div>
+    </div>
+
+    <div class="grupo-delito">
+      <h4>Fraude</h4>
+      <div class="grid">
+        <div class="card">
+          <h5>Top 10 estados con mayor incidencia de fraude</h5>
+          <p class="tag">El patrimonio</p>
+          <p class="delito-tag">Fraude</p>
+          <img src="mapa_top_El_patrimonio_Fraude.png" alt="Top 10 Fraude">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grupo-bien">
+    <h3>La familia</h3>
+
+    <div class="grupo-delito">
+      <h4>Violencia familiar</h4>
+      <div class="grid">
+        <div class="card">
+          <h5>Top 10 estados con mayor incidencia de violencia familiar</h5>
+          <p class="tag">La familia</p>
+          <p class="delito-tag">Violencia familiar</p>
+          <img src="mapa_top_La_familia_Violencia_familiar.png" alt="Top 10 Violencia familiar">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="acumulada">
+  <h2>Incidencia delictiva acumulada</h2>
+  <p class="section-desc">
+    Esta sección presenta gráficas con la incidencia acumulada durante el periodo 2015–2025.
+  </p>
+
+  <div class="grupo-bien">
+    <h3>Delitos frecuentes</h3>
+
+    <div class="grupo-delito">
+      <h4>Tipos de delito con mayor incidencia</h4>
+      <div class="grid">
+        <div class="card">
+          <h5>Delitos más frecuentes en México, 2015–2025</h5>
+          <p class="tag">Incidencia acumulada</p>
+          <p class="delito-tag">Todos los delitos</p>
+          <img src="grafico_delitos_frecuentes.png" alt="Delitos frecuentes">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="evolucion">
+  <h2>Evolución anual</h2>
+  <p class="section-desc">
+    Esta sección muestra gráficas de evolución temporal para observar el comportamiento anual de la incidencia delictiva.
+  </p>
+
+  <div class="grupo-bien">
+    <h3>Panorama nacional</h3>
+
+    <div class="grupo-delito">
+      <h4>Evolución anual total</h4>
+      <div class="grid">
+        <div class="card">
+          <h5>Evolución anual de la incidencia delictiva</h5>
+          <p class="tag">Panorama nacional</p>
+          <p class="delito-tag">Serie temporal</p>
+          <img src="evolucion_anual.png" alt="Evolución anual">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="conclusiones">
+  <div class="intro">
+    <h2>Conclusiones</h2>
+    <p>
+      El atlas permite observar que la incidencia delictiva no se distribuye de manera uniforme en el país.
+      Algunos delitos muestran mayor concentración en entidades con alta densidad poblacional, intensa actividad
+      económica o mayor dinámica urbana.
+    </p>
+    <p>
+      La organización por bien jurídico afectado y tipo de delito facilita una lectura más ordenada y analítica
+      de los patrones territoriales de la incidencia delictiva en México durante el periodo 2015–2025.
+    </p>
+    <p>
+      Fuente: Base de incidencia delictiva estatal. Elaboración propia con Python y GeoPandas.
+    </p>
+  </div>
+</section>
+
+<footer>
+  Atlas de incidencia delictiva en México, 2015–2025 | Elaboración propia
+</footer>
+
+</body>
+</html>
